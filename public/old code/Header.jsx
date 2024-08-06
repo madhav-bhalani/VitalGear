@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "../App.css";
 
-function Header({ onLoginClick, onSignUpClick }) {
+function Header({ onLoginClick, onSignUpClick, onCartClick }) {
   return (
     <>
       <header className="flex flex-row bg-[#dbe2ef] min-h-[70px] justify-between py-5 px-20 items-center text-lg font-bold text-[#09274d]">
@@ -16,13 +16,13 @@ function Header({ onLoginClick, onSignUpClick }) {
 
               <div className="group-hover:block bg-[#dae0ef] w-max pl-7 pr-10 py-5 text-left absolute rounded-b-md z-10 hidden drop-shadow-sm">
                 <ul className="font-semibold text-lg text-[#09274d] flex flex-col gap-3 ">
-                  <NavLink to="/Proteins" state={"Protein"}>
+                  <NavLink to="/Proteins" state={"Pink"}>
                     <li className="hover:text-[#3F72AF]">Proteins</li>
                   </NavLink>
                   <NavLink to="/Gainers" state={"Gainers"}>
                     <li className="hover:text-[#3F72AF]">Gainers</li>
                   </NavLink>
-                  <NavLink to="/PrePostWorkouts" state={"Pre & Post Workouts"}>
+                  <NavLink to="/PrePostWorkouts" state={"PrePostWorkouts"}>
                     <li className="hover:text-[#3F72AF]">Pre/Post Workouts</li>
                   </NavLink>
                   <NavLink to="/Vitamins" state={"Vitamins"}>
@@ -30,7 +30,7 @@ function Header({ onLoginClick, onSignUpClick }) {
                       Vitamin Supplements
                     </li>
                   </NavLink>
-                  <NavLink to="/ActiveWear" state={"Active Wear"}>
+                  <NavLink to="/ActiveWear" state={"ActiveWear"}>
                     <li className="hover:text-[#3F72AF]">Active Wear</li>
                   </NavLink>
                 </ul>
@@ -97,4 +97,3 @@ function Header({ onLoginClick, onSignUpClick }) {
 }
 
 export default Header;
-

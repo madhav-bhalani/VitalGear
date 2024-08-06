@@ -13,7 +13,7 @@ export default function Breadcrumb() {
           <NavLink
             to="/"
             href="#"
-            className="flex h-10 items-center gap-1.5 bg-[#3666b0] text-[#dae0ef] px-4 transition "
+            className="flex h-10 items-center gap-1.5 bg-[#112D4E] text-[#DBE2EF] px-4 transition "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -35,13 +35,24 @@ export default function Breadcrumb() {
         </li>
 
         <li className="relative flex items-center">
-          <span className="absolute inset-y-0 -start-px h-10 w-4 bg-[#3666b0] [clip-path:_polygon(0_0,_0%_100%,_100%_50%)] rtl:rotate-180"></span>
+          <span className="absolute inset-y-0 -start-px h-10 w-4 bg-[#112D4E] [clip-path:_polygon(0_0,_0%_100%,_100%_50%)] rtl:rotate-180"></span>
+
+          <a
+            href=""
+            className="flex h-10 items-center bg-[#3F72AF] pe-4 ps-8 text-sm font-medium transition text-[#DBE2EF]"
+          >
+            {state}
+          </a>
+        </li>
+
+        <li className="relative flex items-center">
+          <span className="absolute inset-y-0 -start-px h-10 w-4 bg-[#3F72AF] [clip-path:_polygon(0_0,_0%_100%,_100%_50%)] rtl:rotate-180"></span>
 
           <a
             href="#"
-            className="flex h-10 items-center bg-[#dae0ef] pe-4 ps-8 text-sm font-medium transition text-[#05294b]"
+            className="flex h-10 items-center bg-[#DBE2EF] pe-4 ps-8 text-sm font-medium transition text-[#112D4E]"
           >
-            {state}
+            VitalGear Biozyme Performance Whey
           </a>
         </li>
       </ol>

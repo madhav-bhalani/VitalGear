@@ -1,7 +1,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 export default function ShopItem({ image, title, size, flavour, price }) {
   return (
@@ -36,16 +36,18 @@ export default function ShopItem({ image, title, size, flavour, price }) {
         <div className="flex flex-row justify-center gap-5">
           {/* <button>Buy Now</button>
             <button>Add to Cart</button> */}
-          <button className="cursor-pointer relative group overflow-hidden border-2 px-8 py-2 border-[#09274d] rounded-full basis-[40%]">
-            <span className="font-bold text-[#dae0ef] text-xl relative z-10 group-hover:text-[#09274d] duration-50 uppercase">
-              Buy Now
-            </span>
-            <span className="absolute top-0 left-0 w-full bg-[#09274d] duration-500 group-hover:-translate-x-full h-full"></span>
-            <span className="absolute top-0 left-0 w-full bg-[#09274d] duration-500 group-hover:translate-x-full h-full"></span>
+          <NavLink to="/Proteins/BuyProduct" state={"Protein"}>
+            <button className="cursor-pointer relative group overflow-hidden border-2 px-8 py-2 border-[#09274d] rounded-full basis-[40%]">
+              <span className="font-bold text-[#dae0ef] text-xl relative z-10 group-hover:text-[#09274d] duration-50 uppercase">
+                Buy Now
+              </span>
+              <span className="absolute top-0 left-0 w-full bg-[#09274d] duration-500 group-hover:-translate-x-full h-full"></span>
+              <span className="absolute top-0 left-0 w-full bg-[#09274d] duration-500 group-hover:translate-x-full h-full"></span>
 
-            <span className="absolute top-0 left-0 w-full bg-[#09274d] duration-500 delay-300 group-hover:-translate-y-full h-full"></span>
-            <span className="absolute delay-300 top-0 left-0 w-full bg-[#09274d] duration-500 group-hover:translate-y-full h-full"></span>
-          </button>
+              <span className="absolute top-0 left-0 w-full bg-[#09274d] duration-500 delay-300 group-hover:-translate-y-full h-full"></span>
+              <span className="absolute delay-300 top-0 left-0 w-full bg-[#09274d] duration-500 group-hover:translate-y-full h-full"></span>
+            </button>
+          </NavLink>
           <button className="cursor-pointer relative group overflow-hidden border-2 px-8 py-2 border-[#09274d] rounded-full basis-[60%]">
             <span className="font-bold text-[#dae0ef] text-xl relative z-10 group-hover:text-[#09274d] duration-500 uppercase">
               Add to cart

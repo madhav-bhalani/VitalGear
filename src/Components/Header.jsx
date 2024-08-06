@@ -1,12 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
 import "../App.css";
 import { useModal } from "../ModalContext";
 
 function Header() {
-  const { handleLoginClick, handleSignUpClick, userInfo } = useModal();
+  const { handleLoginClick, handleSignUpClick, userInfo, handleCartClick } =
+    useModal();
   let firstName = "Madhav";
   let lastName = "Bhalani";
+
   return (
     <>
       <header className="flex flex-row bg-[#dbe2ef] min-h-[70px] justify-between py-5 px-20 items-center text-lg font-bold text-[#112D4E]">
@@ -56,16 +59,24 @@ function Header() {
           </ul>
         </div>
 
-        <div className=" min-w-[300px]">
-          <ul className="flex flex-row p-3 justify-center gap-3">
+        <div className="min-w-[300px]">
+          <ul className="flex flex-row p-3 justify-center gap-3 items-center">
             {userInfo ? (
-              <div className="flex flex-row gap-3 rounded-md bg-[#112D4E] text-[#DBE2EF] p-3">
-                <button>Sign Out</button>
-                <div className="bg-[#DBE2EF] text-[#112D4E] p-2 rounded-full uppercase">
-                  {firstName.charAt(0)}
-                  {lastName.charAt(0)}
+              <>
+                <div className="flex flex-row gap-3 rounded-md bg-[#112D4E] text-[#DBE2EF] p-3">
+                  <button>Sign Out</button>
+                  <div className="bg-[#DBE2EF] text-[#112D4E] p-2 rounded-full uppercase">
+                    {firstName.charAt(0)}
+                    {lastName.charAt(0)}
+                  </div>
                 </div>
-              </div>
+                <button
+                  className="text-[#112D4E] text-2xl"
+                  onClick={handleCartClick}
+                >
+                  <FaShoppingCart />
+                </button>
+              </>
             ) : (
               <>
                 <li>
@@ -83,7 +94,15 @@ function Header() {
                   >
                     Register
                   </button>
-                </li>{" "}
+                </li>
+                <li>
+                  <button
+                    className="bg-[#dae0ef] p-3 rounded-md hover:text-[#3F72AF] duration-500 text-2xl"
+                    onClick={handleCartClick}
+                  >
+                    <FaShoppingCart />
+                  </button>
+                </li>
               </>
             )}
           </ul>

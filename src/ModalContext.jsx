@@ -20,7 +20,13 @@ export const ModalProvider = ({ children }) => {
 
   const handleSignUpModal = () => setIsSignUpVisible(false);
 
-  const [userInfo, setUserInfo] = useState(false);
+  const [userInfo, setUserInfo] = useState(true);
+
+  const [cartVisible, setCartVisible] = useState(false);
+
+  const handleCartClick = () => setCartVisible(true);
+
+  const handleCart = () => setCartVisible(false);
 
   return (
     <ModalContext.Provider
@@ -32,6 +38,9 @@ export const ModalProvider = ({ children }) => {
         handleSignUpClick,
         handleSignUpModal,
         userInfo,
+        cartVisible,
+        handleCartClick,
+        handleCart,
       }}
     >
       {children}

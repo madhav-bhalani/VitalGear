@@ -10,6 +10,7 @@ import PrePostWorkouts from "./PrePostWorkouts";
 import Vitamins from "./Vitamins";
 import ActiveWear from "./ActiveWear";
 import { ModalProvider } from "./ModalContext";
+import BuyProduct from "./Components/BuyProduct";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/ActiveWear",
     element: <ActiveWear />,
+  },
+  {
+    path: "/Proteins/BuyProduct",
+    element: <BuyProduct />,
   },
 ]);
 

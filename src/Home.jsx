@@ -8,6 +8,7 @@ import Features from "./Components/Features";
 import BestSelling from "./Components/BestSelling";
 import Footer from "./Components/Footer";
 import { Pricing } from "./Components/Pricing";
+import ShoppingCart from "./Components/ShoppingCart";
 
 const App = () => {
   const images = ["/carousel/1.png", "/carousel/2.png", "/carousel/3.png"];
@@ -20,10 +21,13 @@ const App = () => {
       <Features />
       <BestSelling />
       <Pricing />
+      
       <Footer />
-
+      <ShoppingCart/>
       <SignIn />
       <SignUp />
+      
+      
     </div>
   );
 };
