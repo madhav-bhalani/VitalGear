@@ -1,11 +1,12 @@
 import React from "react";
-import Header from "./Components/Header";
-import Breadcrumb from "./Components/Breadcrumb";
-import ShopItem from "./Components/ShopItem";
-import Footer from "./Components/Footer";
-import Pagination from "./Components/Pagination";
-import SignIn from "./Components/SignIn";
-import SignUp from "./Components/SignUp";
+import Header from "./Header";
+import Breadcrumb from "./Breadcrumb";
+import ShopItem from "./ShopItem";
+import Footer from "./Footer";
+import Pagination from "./Pagination";
+import SignIn from "./SignIn";
+import SignUp from "./SignUp";
+import ShoppingCart from "./ShoppingCart";
 
 export default function Protein() {
   let shopItem = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -59,6 +60,7 @@ export default function Protein() {
       </div>
 
       <Footer />
+      <ShoppingCart />
       <SignIn />
       <SignUp />
     </>

@@ -20,7 +20,7 @@ export const ModalProvider = ({ children }) => {
 
   const handleSignUpModal = () => setIsSignUpVisible(false);
 
-  const [userInfo, setUserInfo] = useState(true);
+  const [userInfo, setUserInfo] = useState(false);
 
   const [cartVisible, setCartVisible] = useState(false);
 

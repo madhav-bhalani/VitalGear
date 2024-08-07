@@ -10,6 +10,7 @@ import { useState } from "react";
 import { FaCheckCircle, FaUndo, FaTruck } from "react-icons/fa";
 import ProductsBS from "./ProductsBS";
 import SliderImage from "./SliderImage";
+import ShoppingCart from "./ShoppingCart";
 
 export default function BuyProduct() {
   const [quantity, setQuantity] = useState(1);
@@ -180,6 +181,7 @@ export default function BuyProduct() {
         </div>
       </div>
       <Footer />
+      <ShoppingCart />
       <SignIn />
       <SignUp />
     </>

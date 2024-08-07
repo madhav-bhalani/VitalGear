@@ -37,23 +37,20 @@ export default function Breadcrumb() {
         <li className="relative flex items-center">
           <span className="absolute inset-y-0 -start-px h-10 w-4 bg-[#112D4E] [clip-path:_polygon(0_0,_0%_100%,_100%_50%)] rtl:rotate-180"></span>
 
-          <a
-            href=""
+          <NavLink
+            to={`/${state}`}
             className="flex h-10 items-center bg-[#3F72AF] pe-4 ps-8 text-sm font-medium transition text-[#DBE2EF]"
           >
             {state}
-          </a>
+          </NavLink>
         </li>
 
         <li className="relative flex items-center">
           <span className="absolute inset-y-0 -start-px h-10 w-4 bg-[#3F72AF] [clip-path:_polygon(0_0,_0%_100%,_100%_50%)] rtl:rotate-180"></span>
 
-          <a
-            href="#"
-            className="flex h-10 items-center bg-[#DBE2EF] pe-4 ps-8 text-sm font-medium transition text-[#112D4E]"
-          >
+          <NavLink className="flex h-10 items-center bg-[#DBE2EF] pe-4 ps-8 text-sm font-medium transition text-[#112D4E]">
             VitalGear Biozyme Performance Whey
-          </a>
+          </NavLink>
         </li>
       </ol>
     </nav>

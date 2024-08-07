@@ -36,7 +36,7 @@ export default function ShopItem({ image, title, size, flavour, price }) {
         <div className="flex flex-row justify-center gap-5">
           {/* <button>Buy Now</button>
             <button>Add to Cart</button> */}
-          <NavLink to="/Proteins/BuyProduct" state={"Protein"}>
+          <NavLink to="/Proteins/BuyProduct" state={"Proteins"}>
             <button className="cursor-pointer relative group overflow-hidden border-2 px-8 py-2 border-[#09274d] rounded-full basis-[40%]">
               <span className="font-bold text-[#dae0ef] text-xl relative z-10 group-hover:text-[#09274d] duration-50 uppercase">
                 Buy Now

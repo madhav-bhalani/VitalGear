@@ -23,13 +23,13 @@ function Header() {
 
               <div className="group-hover:block bg-[#dae0ef] w-max pl-7 pr-10 py-5 text-left absolute rounded-b-md z-10 hidden drop-shadow-sm">
                 <ul className="font-semibold text-lg text-[#112D4E] flex flex-col gap-3 ">
-                  <NavLink to="/Proteins" state={"Protein"}>
+                  <NavLink to="/Proteins" state={"Proteins"}>
                     <li className="hover:text-[#3F72AF]">Proteins</li>
                   </NavLink>
                   <NavLink to="/Gainers" state={"Gainers"}>
                     <li className="hover:text-[#3F72AF]">Gainers</li>
                   </NavLink>
-                  <NavLink to="/PrePostWorkouts" state={"Pre & Post Workouts"}>
+                  <NavLink to="/PrePostWorkouts" state={"PrePostWorkouts"}>
                     <li className="hover:text-[#3F72AF]">Pre/Post Workouts</li>
                   </NavLink>
                   <NavLink to="/Vitamins" state={"Vitamins"}>
@@ -37,7 +37,7 @@ function Header() {
                       Vitamin Supplements
                     </li>
                   </NavLink>
-                  <NavLink to="/ActiveWear" state={"Active Wear"}>
+                  <NavLink to="/ActiveWear" state={"ActiveWear"}>
                     <li className="hover:text-[#3F72AF]">Active Wear</li>
                   </NavLink>
                 </ul>

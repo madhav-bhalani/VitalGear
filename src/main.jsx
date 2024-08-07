@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Home from "./Home";
+import Home from "./Components/Home";
 import "./index.css";
 import "./App.css";
-import Protein from "./Protein";
+import Protein from "./Components/Protein";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Gainers from "./Gainers";
-import PrePostWorkouts from "./PrePostWorkouts";
-import Vitamins from "./Vitamins";
-import ActiveWear from "./ActiveWear";
+import Gainers from "./Components/Gainers";
+import PrePostWorkouts from "./Components/PrePostWorkouts";
+import Vitamins from "./Components/Vitamins";
+import ActiveWear from "./Components/ActiveWear";
 import { ModalProvider } from "./ModalContext";
 import BuyProduct from "./Components/BuyProduct";
 
