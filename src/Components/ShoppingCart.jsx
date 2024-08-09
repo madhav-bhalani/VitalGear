@@ -14,7 +14,7 @@ const ShoppingCart = () => {
         onClick={handleCart}
       ></div>
       <div
-        className={`fixed left-[50%] duration-500 -translate-x-1/2 -translate-y-1/2 mx-auto min-w-[40%] max-w-2xl bg-[#DBE2EF] text-[#112D4E] flex flex-col w-[40%] gap-10 p-5 rounded-md ${
+        className={`fixed left-[50%] z-10 duration-500 -translate-x-1/2 -translate-y-1/2 mx-auto min-w-[40%] max-w-2xl bg-[#DBE2EF] text-[#112D4E] flex flex-col w-[40%] gap-10 p-5 rounded-md ${
           cartVisible ? "top-[50%]" : "top-[-50%]"
         }`}
       >

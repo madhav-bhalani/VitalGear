@@ -11,6 +11,11 @@ import Vitamins from "./Components/Vitamins";
 import ActiveWear from "./Components/ActiveWear";
 import { ModalProvider } from "./ModalContext";
 import BuyProduct from "./Components/BuyProduct";
+import Contact from "./Components/Contact";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import SignIn from "./Components/SignIn";
+import SignUp from "./Components/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +45,10 @@ const router = createBrowserRouter([
   {
     path: "/Proteins/BuyProduct",
     element: <BuyProduct />,
+  },
+  {
+    path: "/Contact",
+    element: <Contact />,
   },
 ]);
 

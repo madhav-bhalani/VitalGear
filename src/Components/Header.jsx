@@ -43,7 +43,7 @@ function Header() {
                 </ul>
               </div>
             </div>
-            <NavLink>
+            <NavLink to="/Contact">
               <li className="hover:text-[#3F72AF]">Contact</li>
             </NavLink>
           </ul>
