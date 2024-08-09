@@ -1,9 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SignIn.jsx";
 import { useModal } from "../ModalContext.jsx";
+import { loginupuser } from "../config/api.js";
+import { useNavigate } from "react-router-dom";
 
 export default function SignIn() {
   const { isSignInVisible, handleCloseModal } = useModal();
+ // const navigate = useNavigate();
+
+  const [data, setData] = useState({
+    username: "",
+    password: "",
+  });
+
+  const onEvent = (e) => {
+    setData((prevdata) => ({
+      ...prevdata,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+
+  const signinUser = async (e) => {
+    e.preventDefault();
+    const res = await loginupuser(data);
+    const { user } = res;
+    console.log(user);
+
+    handleCloseModal("hidden")
+  };
+
   return (
     <>
       <div
@@ -32,6 +58,8 @@ export default function SignIn() {
             <div className="relative">
               <input
                 type="email"
+                name="username"
+                onChange={onEvent}
                 className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="Enter email"
               />
@@ -61,6 +89,8 @@ export default function SignIn() {
             <div className="relative">
               <input
                 type="password"
+                name="password"
+                onChange={onEvent}
                 className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="Enter password"
               />
@@ -91,6 +121,7 @@ export default function SignIn() {
 
           <button
             type="submit"
+            onClick={signinUser}
             className="block w-full rounded-lg bg-[#09274d] px-5 py-3 text-sm font-semibold text-white"
           >
             Sign in

@@ -1,9 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SignUp.jsx";
 import { useModal } from "../ModalContext.jsx";
+import { addData } from "../config/api.js";
+import { useNavigate } from "react-router-dom";
 
 export default function SignUp() {
   const { isSignUpVisible, handleSignUpModal } = useModal();
+  const navigate = useNavigate()
+
+  const [data, setData] = useState({
+    username: "",
+    firstname: "",
+    lastname: "",
+    password: "",
+  });
+
+  const onEvent = (e) => {
+    setData((prevdata) => ({
+      ...prevdata,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const signupUser = async (e) => {
+    e.preventDefault();
+    const res = await addData(data);
+    console.log(res);
+    // navigate("/login");
+    handleSignUpModal("hidden")
+  };
+
+  
+
   return (
     <>
       <div
@@ -43,6 +71,8 @@ export default function SignUp() {
               <input
                 type="text"
                 id="first-name"
+                name="firstname"
+                onChange={onEvent}
                 className="w-full rounded-lg border-gray-200 p-4 text-sm shadow-sm"
                 placeholder="First Name"
               />
@@ -57,6 +87,8 @@ export default function SignUp() {
               <input
                 type="text"
                 id="last-name"
+                name="lastname"
+                onChange={onEvent}
                 className="w-full rounded-lg border-gray-200 p-4 text-sm shadow-sm"
                 placeholder="Last Name"
               />
@@ -74,6 +106,8 @@ export default function SignUp() {
               <input
                 type="email"
                 id="email"
+                name="username"
+                onChange={onEvent}
                 className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="Enter email"
               />
@@ -107,6 +141,8 @@ export default function SignUp() {
               <input
                 type="password"
                 id="password"
+                name="password"
+                onChange={onEvent}
                 className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="Create password"
               />
@@ -176,6 +212,7 @@ export default function SignUp() {
 
           <button
             type="submit"
+            onClick={signupUser}
             className="block w-full rounded-lg bg-[#09274d] px-5 py-3 text-sm font-semibold text-white"
           >
             Sign Up
